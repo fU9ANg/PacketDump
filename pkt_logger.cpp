@@ -57,6 +57,38 @@ void pkt_logger::print (const string& str, const char* file, const char* func, u
     }
 }
 
+void pkt_logger::error (const char *fmt, ...)
+{
+    va_list ap;
+
+    (void)fprintf(f, "ERROR: ");
+    va_start(ap, fmt);
+    (void) vfprintf(f, fmt, ap);
+    va_end(ap);
+    if (*fmt)
+    {
+        fmt += strlen (fmt);
+        if (fmt[-1] != '\n')
+            (void)fputc ('\n', f);
+    }
+}
+
+void pkt_logger::warning (const char *fmt, ...)
+{
+    va_list ap;
+
+    (void)fprintf(f, "WARNING: ");
+    va_start(ap, fmt);
+    (void) vfprintf(f, fmt, ap);
+    va_end(ap);
+    if (*fmt)
+    {
+        fmt += strlen (fmt);
+        if (fmt[-1] != '\n')
+            (void)fputc ('\n', f);
+    }
+}
+
 pkt_logger::~pkt_logger (void)
 {
     if (f != NULL)

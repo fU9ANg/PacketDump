@@ -9,9 +9,12 @@
 #include "pkt_global.h"
 #include "pkt_lock.h"
 
+#define FMT "%s:%s(%d) "
+#define FFL __FILE__, __FUNCTION__, __LINE__
+
 class pkt_logger
 {
-#define out(s) print (s, __FILE__, __FUNCTION__, __LINE__)
+#define out(s) print (s, FFL)
 
     public:
         static pkt_logger* instance(const string& filename = "PacketDump_L0g");
@@ -19,6 +22,8 @@ class pkt_logger
         void set_logfile (const string& filename);
         void clear (void);
         void print (const string& str, const char* file, const char* func, unsigned int line);
+        void error (const char *fmt, ...);
+        void warning (const char *fmt, ...);
         ~pkt_logger (void);
 
     private:

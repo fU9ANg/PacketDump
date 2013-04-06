@@ -25,13 +25,16 @@ SET (SRC_LIST
     pkt_logger.cpp
     pkt_memman.cpp
     pkt_pool.cpp
-    pkt_capture.cpp
+    pkt_analyzer.cpp
+    pkt_pcap.cpp
     pkt_common.cpp
     main.cpp
 )
 
 SET (EXTRA_LIBS
-    -lpthread -lrt
+    -lpthread
+    -lrt
+    -lpcap
 )
 
 add_executable (PacketDump ${SRC_LIST})

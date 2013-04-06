@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdarg.h>
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
@@ -22,6 +23,7 @@
 #include <sys/types.h>
 #include <arpa/inet.h>
 #include <sys/epoll.h>
+#include <sys/select.h>
 #include <time.h>
 #include <errno.h>
 #include <signal.h>

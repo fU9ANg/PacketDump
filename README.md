@@ -1,4 +1,4 @@
 PacketDump
 ==========
 
-a command-line packet analyzer
+A command-line packet analyzer
