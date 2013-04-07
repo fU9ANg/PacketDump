@@ -17,21 +17,8 @@
 #include "pkt_common.h"
 #include "pkt_pcap.h"
 #include "pkt_analyzer.h"
+#include "handle_analyzer.h"
 
-#if 0
-int main()
-{
-    LOG->out ("askdjfksjdf");
-    LOG->clear ();
-
-    LOG->out ("11111111111");
-    LOG->out ("2222222222");
-    LOG->out ("dkfdkfj");
-
-    LOG->error ("%s, %d", "abc", 10);
-    LOG->warning (FMT"%f, %u", FFL, 120012.f, 19);
-}
-#endif
 void sig_handler (int sig)
 {
     printf ("got exit signal\n");

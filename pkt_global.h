@@ -34,8 +34,10 @@
 #include <queue>
 #include <pthread.h>
 #include <list>
+#include <map>
 #include <signal.h>
 #include <fcntl.h>
+#include <pcap/bpf.h>
 
 using namespace std;
 
