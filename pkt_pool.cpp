@@ -1,4 +1,12 @@
 
+/*
+ * This part of PacketDump
+ *
+ * Author: fU9ANg
+ * E-mail: bb.newlife@gmail.com
+ * Descr : Thread Pool
+ */
+
 #include "pkt_pool.h"
 
 bool pool::init_threads ()
@@ -7,6 +15,7 @@ bool pool::init_threads ()
     {
         pthread_t pid = 0;
         pthread_create (&pid, 0, pool::function, this);
+        cout << "pthread_id: " << pid << endl;
         threads.push_back (pid);
     }
     return true;

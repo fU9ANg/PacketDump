@@ -1,6 +1,10 @@
 
 /*
- * pkt_global.h
+ * This part of PacketDump
+ *
+ * Author: fU9ANg
+ * E-mail: bb.newlife@gmail.com
+ * Descr : Global header file, variable and macro. etc.
  */
 
 #ifndef _PKT_GLOBAL_H

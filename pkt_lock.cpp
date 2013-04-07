@@ -1,4 +1,12 @@
 
+/*
+ * This part of PacketDump
+ *
+ * Author: fU9ANg
+ * E-mail: bb.newlife@gmail.com
+ * Descr : Lock and guard for threads
+ */
+
 #include "pkt_lock.h"
 
 pkt_lock::pkt_lock (void)

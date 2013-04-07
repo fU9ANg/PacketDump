@@ -1,4 +1,12 @@
 
+/*
+ * This part of PacketDump
+ *
+ * Author: fU9ANg
+ * E-mail: bb.newlife@gmail.com
+ * Descr : The memory manager
+ */
+
 #include "pkt_memman.h"
 
 pkt_buf::pkt_buf (unsigned int size)

@@ -1,4 +1,12 @@
 
+/*
+ * This part of PacketDump
+ *
+ * Author: fU9ANg
+ * E-mail: bb.newlife@gmail.com
+ * Descr : The protocol analysis task
+ */
+
 #ifndef _PKT_ANALYZER_H
 #define _PKT_ANALYZER_H
 

@@ -1,4 +1,12 @@
 
+/*
+ * This part of PacketDump
+ *
+ * Author: fU9ANg
+ * E-mail: bb.newlife@gmail.com
+ * Descr : Common class contain memory manager and capture queue
+ */
+
 #ifndef _PKT_COMMON_H
 #define _PKT_COMMON_H
 

@@ -1,4 +1,12 @@
 
+/*
+ * This part of PacketDump
+ *
+ * Author: fU9ANg
+ * E-mail: bb.newlife@gmail.com
+ * Descr : The pcap (libpcap) task
+ */
+
 #ifndef _PKT_PCAP_H
 #define _PKT_PCAP_H
 

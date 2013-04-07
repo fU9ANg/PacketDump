@@ -1,10 +1,15 @@
 
 /*
- * pkt_logger.cpp
+ * This part of PacketDump
+ *
+ * Author: fU9ANg
+ * E-mail: bb.newlife@gmail.com
+ * Descr : The common logger interface (single)
  */
 
 #include "pkt_logger.h"
 
+// initialize static variable
 pkt_logger* pkt_logger::static_logger;
 
 pkt_logger* pkt_logger::instance(const string& filename)

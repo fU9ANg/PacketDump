@@ -1,4 +1,11 @@
 
+/*
+ * This part of PacketDump
+ *
+ * Author: fU9ANg
+ * E-mail: bb.newlife@gmail.com
+ * Descr : Lock and guard for threads
+ */
 
 #include "pkt_global.h"
 

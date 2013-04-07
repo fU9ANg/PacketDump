@@ -1,6 +1,10 @@
 
 /*
- * pkt_queue.h
+ * This part of PacketDump
+ *
+ * Author: fU9ANg
+ * E-mail: bb.newlife@gmail.com
+ * Descr : Queue of task of threads
  */
 
 #ifndef _PKT_QUEUE_H

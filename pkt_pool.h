@@ -1,4 +1,12 @@
 
+/*
+ * This part of PacketDump
+ *
+ * Author: fU9ANg
+ * E-mail: bb.newlife@gmail.com
+ * Descr : Thread Pool
+ */
+
 #ifndef _PKT_POOL_H
 #define _PKT_POOL_H
 

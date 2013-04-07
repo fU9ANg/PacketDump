@@ -1,4 +1,12 @@
 
+/*
+ * This part of PacketDump
+ *
+ * Author: fU9ANg
+ * E-mail: bb.newlife@gmail.com
+ * Descr : Abstract thread task
+ */
+
 #ifndef _PKT_TASK_H
 #define _PKT_TASK_H
 

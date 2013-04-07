@@ -1,6 +1,10 @@
 
 /*
- * pkt_logger.h
+ * This part of PacketDump
+ *
+ * Author: fU9ANg
+ * E-mail: bb.newlife@gmail.com
+ * Descr : The common logger interface (single)
  */
 
 #ifndef _PKT_LOGGER_H

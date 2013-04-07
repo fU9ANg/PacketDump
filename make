@@ -1,7 +1,4 @@
 #!/bin/sh
 
-rm -rf build &&
-mkdir build &&
-cd build &&
-cmake ../ &&
-make
+# for test
+rm -rf build && mkdir build && cd build && cmake .. && make

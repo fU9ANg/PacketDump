@@ -1,4 +1,13 @@
 
+/*
+ * This part of PacketDump
+ *
+ * Author: fU9ANg
+ * E-mail: bb.newlife@gmail.com
+ * Descr : The pcap (libpcap) task
+ */
+
+#include "pkt_logger.h"
 #include "pkt_pcap.h"
 #include "pkt_memman.h"
 #include "pkt_queue.h"
@@ -6,16 +15,25 @@
 
 void pkt_pcap::callback (u_char* useless, const struct pcap_pkthdr* pkthdr, const u_char* packet)
 {
+    cout << "pkt_pcap callback: " << pthread_self() << " caplen:" << pkthdr->caplen << " len:" << pkthdr->len << endl;
+    
+#if 0
     pkt_buf* buf = PKTCOMMON->memories.malloc ();
     if (buf == NULL)
     {
         printf ("out of memory\n");
         return;
     }
+    if (pkthdr->caplen != pkthdr->len)
+    {
+        LOG->warning (FMT"%s", FFL, "WARNING: capture length not equal packet' length");
+    }
+
     (void) memcpy ((u_char*) buf->data(), (u_char*) pkthdr, sizeof (struct pcap_pkthdr));
     (void) memcpy ((u_char*) buf->data() + sizeof (struct pcap_pkthdr), packet, \
-                    1); // pkthdr->len;
+                    pkthdr->len);
     PKTCOMMON->capture_queue.push (buf);
+#endif
 }
 
 bool pkt_pcap::lookupdev (void)

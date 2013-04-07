@@ -1,8 +1,17 @@
 
+/*
+ * This part of PacketDump
+ *
+ * Author: fU9ANg
+ * E-mail: bb.newlife@gmail.com
+ * Descr : The memory manager
+ */
+
 #ifndef _PKT_MEMMAN_H
 #define _PKT_MEMMAN_H
 
 #include "pkt_global.h"
+#include "pkt_lock.h"
 
 class pkt_buf
 {
@@ -28,7 +37,7 @@ class pkt_memman
     public:
         pkt_memman (unsigned int count = BUFFNUMB)
         {
-            //pkt_guard guard (mutex);
+            pkt_guard guard (lock);
             this->count = count;
             for (unsigned int i=0; i<this->count; i++)
             {
@@ -39,7 +48,7 @@ class pkt_memman
 
         ~pkt_memman (void)
         {
-            //pkt_guard guard (mutex);
+            pkt_guard guard (lock);
             for (unsigned int i=0; i<this->count; i++)
             {
                 T* t = bufs.front();
@@ -50,7 +59,7 @@ class pkt_memman
 
         T* malloc (void)
         {
-            //pkt_guard guard (mutex);
+            pkt_guard guard (lock);
             if (bufs.empty())
                 return NULL;
 
@@ -61,7 +70,7 @@ class pkt_memman
 
         bool free (T* t)
         {
-            //pkt_guard guard (mutex);
+            pkt_guard guard (lock);
             if (t == NULL)
                 return false;
 
@@ -71,18 +80,19 @@ class pkt_memman
 
         unsigned int get_count (void)
         {
+            pkt_guard guard (lock);
             return count;
         }
 
         unsigned int get_usedcount (void)
         {
-            //pkt_guard guard (mutex);
+            pkt_guard guard (lock);
             return (count - bufs.size());
         }
     private:
         queue_bufs bufs;
         unsigned int count;
-        pthread_mutex_t mutex;
+        pkt_lock lock;
 };
 
 #endif //_PKT_MEMMAN_H
