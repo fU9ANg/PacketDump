@@ -1,0 +1,225 @@
+
+    // printers
+    ANALYZERHANDLE(DLT_ARCNET, print_arcnet);
+
+    #ifdef DLT_ARCNET_LINUX
+    ANALYZERHANDLE(DLT_ARCNET_LINUX, print_arcnet_linux);
+    #endif
+
+    ANALYZERHANDLE(DLT_IEEE802, print_ieee802);
+
+    #ifdef DLT_LANE8023
+    ANALYZERHANDLE(DLT_LANE8023, print_lane8023);
+    #endif
+
+    #ifdef DLT_CIP
+    ANALYZERHANDLE(DLT_CIP, print_cip);
+    #endif
+
+    #ifdef DLT_ATM_CLIP
+    ANALYZERHANDLE(DLT_ATM_CLIP, print_cip);
+    #endif
+
+    ANALYZERHANDLE(DLT_SLIP, print_sl);
+    #ifdef DLT_SLIP_BSDOS
+    ANALYZERHANDLE(DLT_SLIP_BSDOS, print_slip_bsdos);
+    #endif
+
+    ANALYZERHANDLE(DLT_PPP, print_ppp);
+    #ifdef DLT_PPP_WITHDIRECTION
+    ANALYZERHANDLE(DLT_PPP_WITHDIRECTION, print_ppp_withdirection);
+    #endif
+
+    #ifdef DLT_PPP_BSDOS
+    ANALYZERHANDLE(DLT_PPP_BSDOS, print_ppp_bsdos);
+    #endif
+
+    ANALYZERHANDLE(DLT_FDDI, print_fddi);
+    #ifdef DLT_LOOP
+    ANALYZERHANDLE(DLT_LOOP, print_null);
+    #endif
+
+    ANALYZERHANDLE(DLT_RAW, print_raw);
+    ANALYZERHANDLE(DLT_ATM_RFC1483, print_atm);
+    #ifdef DLT_C_HDLC
+    ANALYZERHANDLE(DLT_C_HDLC, print_c_chdlc);
+    #endif
+
+    #ifdef DLT_HDLC
+    ANALYZERHANDLE(DLT_HDLC, print_chdlc);
+    #endif
+
+    #ifdef DLT_PPP_SERIAL
+    ANALYZERHANDLE(DLT_PPP_SERIAL, print_ppp_hdlc);
+    #endif
+
+    #ifdef DLT_PPP_ETHER
+    ANALYZERHANDLE(DLT_PPP_ETHER, print_pppoe);
+    #endif
+
+    #ifdef DLT_LINUX_SLL
+    ANALYZERHANDLE(DLT_LINUX_SLL, print_sll);
+    #endif
+
+    #ifdef DLT_IEEE802_11
+    ANALYZERHANDLE(DLT_IEEE802_11, print_ieee802_11);
+    #endif
+
+    #ifdef DLT_LTALK
+    ANALYZERHANDLE(DLT_LTALK, print_ltask);
+    #endif
+
+    #if defined(DLT_PFLOG) && defined(HAVE_NET_PFVAR_H)
+    ANALYZERHANDLE(DLT_PFLOG, print_pflog);
+    #endif
+
+    #ifdef DLT_FR
+    ANALYZERHANDLE(DLT_FR, print_fr);
+    #endif
+
+    #ifdef DLT_FRELAY
+    ANALYZERHANDLE(DLT_FRELAY, print_frelay);
+    #endif
+
+    #ifdef DLT_SUNATM
+    ANALYZERHANDLE(DLT_SUNATM, print_sunatm);
+    #endif
+
+    #ifdef DLT_IP_OVER_FC
+    ANALYZERHANDLE(DLT_IP_OVER_FC, print_ipfc);
+    #endif
+
+    #ifdef DLT_PRISM_HEADER
+    ANALYZERHANDLE(DLT_PRISM_HEADER, print_prism);
+    #endif
+
+    #ifdef DLT_IEEE802_11_RADIO
+    ANALYZERHANDLE(DLT_IEEE802_11_RADIO, print_ieee802_11_radio);
+    #endif
+
+    #ifdef DLT_ENC
+    ANALYZERHANDLE(DLT_ENC, print_enc);
+    #endif
+
+    #ifdef DLT_SYMANTEC_FIREWALL
+    ANALYZERHANDLE(DLT_SYMANTEC_FIREWALL, print_symantec);
+    #endif
+
+    #ifdef DLT_APPLE_IP_OVER_IEEE1394
+    ANALYZERHANDLE(DLT_APPLE_IP_OVER_IEEE1394, print_ap1394);
+    #endif
+
+    #ifdef DLT_IEEE802_11_RADIO_AVS
+    ANALYZERHANDLE(DLT_IEEE802_11_RADIO_AVS, print_ieee802_11_radio_avs);
+    #endif
+
+    #ifdef DLT_JUNIPER_ATM1
+    ANALYZERHANDLE(DLT_JUNIPER_ATM1, print_juniper_atm1);
+    #endif
+
+    #ifdef DLT_JUNIPER_ATM2
+    ANALYZERHANDLE(DLT_JUNIPER_ATM2, print_juniper_atm2);
+    #endif
+
+    #ifdef DLT_JUNIPER_MFR
+    ANALYZERHANDLE(DLT_JUNIPER_MFR, print_juniper_mfr);
+    #endif
+
+    #ifdef DLT_JUNIPER_MLFR
+    ANALYZERHANDLE(DLT_JUNIPER_MLFR, print_juniper_mlfr);
+    #endif
+
+    #ifdef DLT_JUNIPER_MLPPP
+    ANALYZERHANDLE(DLT_JUNIPER_MLPPP, print_juniper_mlppp);
+    #endif
+
+    #ifdef DLT_JUNIPER_PPPOE
+    ANALYZERHANDLE(DLT_JUNIPER_PPPOE, print_juniper_pppoe);
+    #endif
+
+    #ifdef DLT_JUNIPER_PPPOE_ATM
+    ANALYZERHANDLE(DLT_JUNIPER_PPPOE_ATM, print_juniper_pppoe_atm);
+    #endif
+
+    #ifdef DLT_JUNIPER_GGSN
+    ANALYZERHANDLE(DLT_JUNIPER_GGSN, print_juniper_ggsn);
+    #endif
+
+    #ifdef DLT_JUNIPER_ES
+    ANALYZERHANDLE(DLT_JUNIPER_ES, print_juniper_es);
+    #endif
+
+    #ifdef DLT_JUNIPER_MONITOR
+    ANALYZERHANDLE(DLT_JUNIPER_MONITOR, print_juniper_monitor);
+    #endif
+
+    #ifdef DLT_JUNIPER_SERVICES
+    ANALYZERHANDLE(DLT_JUNIPER_SERVICES, print_juniper_services);
+    #endif
+
+    #ifdef DLT_JUNIPER_ETHER
+    ANALYZERHANDLE(DLT_JUNIPER_ETHER, print_juniper_ether);
+    #endif
+
+    #ifdef DLT_JUNIPER_PPP
+    ANALYZERHANDLE(DLT_JUNIPER_PPP, print_juniper_ppp);
+    #endif
+
+    #ifdef DLT_JUNIPER_FRELAY
+    ANALYZERHANDLE(DLT_JUNIPER_FRELAY, print_juniper_frelay);
+    #endif
+
+    #ifdef DLT_JUNIPER_CHDLC
+    ANALYZERHANDLE(DLT_JUNIPER_CHDLC, print_juniper_chdlc);
+    #endif
+
+    #ifdef DLT_MFR
+    ANALYZERHANDLE(DLT_MFR, print_mfr);
+    #endif
+
+    #if defined(DLT_BLUETOOTH_HCI_H4_WITH_PHDR) && defined(HAVE_PCAP_BLUETOOTH_H)
+    ANALYZERHANDLE(DLT_BLUETOOTH_HCI_H4_WITH_PHDR, print_bt);
+    #endif
+
+    #ifdef HAVE_PCAP_USB_H
+    #ifdef DLT_USB_LINUX
+    ANALYZERHANDLE(DLT_USB_LINUX, print_usb_linux_48_byte);
+    #endif
+    #ifdef DLT_USB_LINUX_MMAPPED
+    ANALYZERHANDLE(DLT_USB_LINUX_MMAPPED, print_usb_linux_64_byte);
+    #endif
+    #endif
+
+    #ifdef DLT_IPV4
+    ANALYZERHANDLE(DLT_IPV4, print_ipv4); //equal 'print_raw'
+    #endif
+
+    #ifdef DLT_IPV6
+    ANALYZERHANDLE(DLT_IPV6, print_ipv6); //equal 'print_raw'
+    #endif
+
+    // ndo_printers
+    ANALYZERHANDLE(DLT_EN10MB, print_ether);
+    #ifdef DLT_IPNET
+    ANALYZERHANDLE(DLT_IPNET, print_ipnet);
+    #endif
+
+    #ifdef DLT_IEEE802_15_4
+    ANALYZERHANDLE(DLT_IEEE802_15_4, print_ieee802_15_4);
+    #endif
+
+    #ifdef DLT_IEEE802_15_4_NOFCS
+    ANALYZERHANDLE(DLT_IEEE802_15_4_NOFCS, print_ieee802_15_4_nofcs); // equal 'print_ieee802_15_4'
+    #endif
+
+    #ifdef DLT_PPI
+    ANALYZERHANDLE(DLT_PPI, print_ppi);
+    #endif
+
+    #ifdef DLT_NETANALYZER
+    ANALYZERHANDLE(DLT_NETANALYZER, print_netanalyzer);
+    #endif
+
+    #ifdef DLT_NETANALYZER_TRANSPARENT
+    ANALYZERHANDLE(DLT_NETANALYZER_TRANSPARENT, print_netanalyzer_transparent);
+    #endif
